@@ -45,16 +45,16 @@ let iguales = () => {
   recogidas en la funcion iguales*/
   temp1 = setInterval(iguales2, 70);
 };
-
-/*Función que me devuelve las imágenes al inicio*/
-empezar = () => {
-  img1.style.left = 0 + "%";
-  img2.style.left = 0 + "%";
-  console.log(2);
-};
 /*Función que me para el intervalo, pero sigue permaneciendo la posicion un
   en el lugar que se encuentra y vuelve al inicio*/
 stop = () => {
   clearInterval(temp1);
   console.log(1);
 };
+/*Función que me devuelve las imágenes al inicio*/
+empezar = () => {
+  img1.style.left = 0 + "%";
+  img2.style.left = 0 + "%";
+  console.log(2);
+};
+
