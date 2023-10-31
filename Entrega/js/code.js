@@ -7,6 +7,7 @@ va más lenta que la segunda*/
 aCorrer2 = () => {
   img1.style.left = posicion + "%";
   img2.style.left = posicion + 5 + "%";
+
   posicion++;
   /* Indicación para que cuando llegue al final de lapantalla vuelva al inicio para
   poder crear una animacion*/
@@ -47,9 +48,12 @@ let iguales = () => {
 };
 /*Función que me para el intervalo, pero sigue permaneciendo la posicion un
   en el lugar que se encuentra y vuelve al inicio*/
-stop = () => {
+stop = (e) => {
+  event.preventDefault(); //BELEN . ESTA OPCION SOLO SI ES SUBMIT
+
   clearInterval(temp1);
-  console.log(1);
+
+  //console.log(1);
 };
 /*Función que me devuelve las imágenes al inicio*/
 empezar = () => {
@@ -58,3 +62,10 @@ empezar = () => {
   console.log(2);
 };
 
+/* 
+Muy bien Clara,
+Lo que te pasa en la función stop es que estás utlizando un botón de tipo submit. Por defecto, los submit,
+recargan la pagina. Para que no lo haga, tienes dos opciones:
+- o pones type="button"
+- o pones type="button" y se le tiene que indicar que por defecto no recargue: con  preventDefault();
+*/
